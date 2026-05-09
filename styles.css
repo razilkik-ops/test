@@ -1639,6 +1639,29 @@ body[data-theme="dark"] .portfolio-slide {
     padding: 60px 0;
   }
 
+  .slider-stage {
+    min-height: 640px;
+  }
+
+  .portfolio-slide h3 {
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+
+  .portfolio-slide p {
+    line-height: 1.5;
+  }
+
+  .slide-points {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .slide-points li {
+    padding-left: 16px;
+    line-height: 1.35;
+  }
+
   .section-head {
     gap: 14px;
   }
@@ -1803,6 +1826,10 @@ body[data-theme="dark"] .portfolio-slide {
 
   .hero {
     min-height: auto;
+  }
+
+  .slider-stage {
+    min-height: 700px;
   }
 
   .section-head h2,
