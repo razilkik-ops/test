@@ -206,6 +206,7 @@ body.modal-open .page-frame {
 .icon-button {
   width: 44px;
   height: 44px;
+  padding: 0;
   border-radius: 50%;
   flex: 0 0 auto;
 }
@@ -215,6 +216,8 @@ body.modal-open .page-frame {
 }
 
 .theme-toggle__icon {
+  display: block;
+  margin: 0;
   width: 18px;
   height: 18px;
   border-radius: 50%;
