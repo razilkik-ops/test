@@ -1603,7 +1603,17 @@ body[data-theme="dark"] .portfolio-slide {
   }
 
   .hero-strip {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
     display: block;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 
   .hero-strip div {
@@ -1777,6 +1787,10 @@ body[data-theme="dark"] .portfolio-slide {
 
   .section {
     padding: 52px 0;
+  }
+
+  .hero {
+    min-height: auto;
   }
 
   .section-head h2,
