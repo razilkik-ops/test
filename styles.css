@@ -1640,7 +1640,22 @@ body[data-theme="dark"] .portfolio-slide {
   }
 
   .slider-stage {
-    min-height: 640px;
+    min-height: 0;
+    margin-top: 16px;
+  }
+
+  .portfolio-slide {
+    position: static;
+    inset: auto;
+    display: none;
+    transform: none;
+    transition: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .portfolio-slide.is-active {
+    display: grid;
   }
 
   .portfolio-slide h3 {
@@ -1660,6 +1675,15 @@ body[data-theme="dark"] .portfolio-slide {
   .slide-points li {
     padding-left: 16px;
     line-height: 1.35;
+  }
+
+  .field-grid {
+    gap: 10px;
+  }
+
+  .field {
+    gap: 6px;
+    margin-bottom: 10px;
   }
 
   .section-head {
@@ -1826,10 +1850,6 @@ body[data-theme="dark"] .portfolio-slide {
 
   .hero {
     min-height: auto;
-  }
-
-  .slider-stage {
-    min-height: 700px;
   }
 
   .section-head h2,
