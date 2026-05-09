@@ -131,8 +131,10 @@ body.modal-open .page-frame {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--header-bg);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
+  overflow: hidden;
   transform: translateX(-50%);
 }
 
@@ -185,6 +187,7 @@ body.modal-open .page-frame {
 .header-actions {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 10px;
 }
 
@@ -204,6 +207,11 @@ body.modal-open .page-frame {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.theme-toggle {
+  align-self: center;
 }
 
 .theme-toggle__icon {
@@ -1521,6 +1529,9 @@ body[data-theme="dark"] .portfolio-slide {
     min-height: 62px;
     padding: 8px;
     gap: 8px;
+    background: rgba(22, 13, 47, 0.7);
+    -webkit-backdrop-filter: blur(22px) saturate(1.2);
+    backdrop-filter: blur(22px) saturate(1.2);
   }
 
   .brand {
@@ -1554,6 +1565,11 @@ body[data-theme="dark"] .portfolio-slide {
   .icon-button {
     width: 40px;
     height: 40px;
+  }
+
+  .theme-toggle {
+    min-width: 40px;
+    min-height: 40px;
   }
 
   .hero {
