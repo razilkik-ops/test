@@ -155,6 +155,7 @@ body.modal-open .page-frame {
 .brand-copy strong,
 .brand-copy small {
   display: block;
+  color: var(--white);
 }
 
 .brand-copy strong {
@@ -163,7 +164,6 @@ body.modal-open .page-frame {
 }
 
 .brand-copy small {
-  color: var(--muted);
   font-size: 0.78rem;
 }
 
