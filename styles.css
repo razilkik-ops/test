@@ -22,6 +22,8 @@
   --dark-band-start: #2c176d;
   --dark-band-end: #5f31f5;
   --chat-shadow: 0 20px 50px rgba(91, 46, 255, 0.22);
+  --surface-mobile: #ffffff;
+  --overlay-mobile: rgba(18, 12, 36, 0.54);
 }
 
 body[data-theme="dark"] {
@@ -45,6 +47,8 @@ body[data-theme="dark"] {
   --dark-band-start: #171028;
   --dark-band-end: #2f175f;
   --chat-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  --surface-mobile: #201534;
+  --overlay-mobile: rgba(6, 4, 14, 0.72);
 }
 
 *,
@@ -426,6 +430,7 @@ body.modal-open .page-frame {
   border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 }
 
@@ -1143,6 +1148,7 @@ body[data-theme="dark"] .portfolio-slide {
   opacity: 0;
   visibility: hidden;
   background: rgba(18, 12, 36, 0.24);
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   transition: opacity 240ms ease, visibility 240ms ease;
 }
@@ -1159,6 +1165,8 @@ body[data-theme="dark"] .portfolio-slide {
   gap: 24px;
   width: min(980px, 100%);
   padding: 28px;
+  overflow: hidden;
+  isolation: isolate;
   transform: translateY(22px) scale(0.98);
   transition: transform 240ms ease;
 }
@@ -1262,8 +1270,37 @@ body[data-theme="dark"] .portfolio-slide {
   right: 16px;
   width: 40px;
   height: 40px;
+  padding: 0;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 0;
+}
+
+.close-icon {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.close-icon::before,
+.close-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform-origin: center;
+}
+
+.close-icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .chat-widget {
@@ -1285,12 +1322,36 @@ body[data-theme="dark"] .portfolio-slide {
   box-shadow: var(--chat-shadow);
 }
 
+.chat-launcher__icon {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 10px;
+}
+
+.chat-launcher__icon::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  bottom: -5px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  border-bottom-right-radius: 3px;
+  transform: skewX(-22deg) rotate(10deg);
+}
+
 .chat-panel {
   position: absolute;
   right: 0;
   bottom: 64px;
   width: 100%;
   padding: 18px;
+  overflow: hidden;
+  isolation: isolate;
   opacity: 0;
   visibility: hidden;
   transform: translateY(16px);
@@ -1311,8 +1372,9 @@ body[data-theme="dark"] .portfolio-slide {
 .chat-close {
   width: 34px;
   height: 34px;
+  padding: 0;
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 0;
 }
 
 .chat-messages {
@@ -1495,11 +1557,12 @@ body[data-theme="dark"] .portfolio-slide {
   }
 
   .hero {
-    min-height: 880px;
+    min-height: 760px;
   }
 
   .hero-content {
-    padding-top: 124px;
+    padding-top: 116px;
+    padding-bottom: 182px;
   }
 
   .hero h1 {
@@ -1530,10 +1593,40 @@ body[data-theme="dark"] .portfolio-slide {
   .hero-strip div {
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    min-height: 0;
+    padding: 16px 18px;
   }
 
   .section {
-    padding: 72px 0;
+    padding: 60px 0;
+  }
+
+  .section-head {
+    gap: 14px;
+  }
+
+  .capability-grid,
+  .cases-grid {
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .tools-grid,
+  .request-layout,
+  .shop-layout {
+    gap: 20px;
+  }
+
+  .capability-card,
+  .case-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .card-number,
+  .case-card span,
+  .slide-tag {
+    margin-bottom: 18px;
   }
 
   .section-head h2,
@@ -1543,12 +1636,16 @@ body[data-theme="dark"] .portfolio-slide {
 
   .modal-backdrop {
     padding: 12px;
+    background: var(--overlay-mobile);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .modal-card {
     max-height: calc(100vh - 24px);
     overflow: auto;
     padding: 18px;
+    background: var(--surface-mobile);
   }
 
   .product-modal-bottom {
@@ -1567,7 +1664,7 @@ body[data-theme="dark"] .portfolio-slide {
   }
 
   .portfolio-slide {
-    padding: 22px;
+    padding: 20px;
   }
 
   .shop-toolbar {
@@ -1597,23 +1694,46 @@ body[data-theme="dark"] .portfolio-slide {
     align-self: center;
   }
 
+  .capability-card,
+  .case-card,
+  .portfolio-slider,
+  .demo-tabs,
+  .project-calculator,
+  .console-demo,
+  .request-form,
+  .product-card,
+  .shop-main,
+  .cart-panel,
+  .checkout-form,
+  .modal-card,
+  .chat-panel {
+    background: var(--surface-mobile);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .chat-widget {
-    right: 10px;
-    left: 10px;
-    bottom: 10px;
-    width: auto;
-    max-width: none;
+    right: 12px;
+    left: auto;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    width: min(360px, calc(100vw - 24px));
+    max-width: min(360px, calc(100vw - 24px));
   }
 
   .chat-launcher {
-    width: 100%;
-    min-width: 0;
+    width: 58px;
+    min-width: 58px;
+    height: 58px;
+    margin-left: auto;
+    padding: 0;
+    border-radius: 50%;
   }
 
   .chat-panel {
     right: 0;
-    width: 100%;
-    max-height: calc(100vh - 160px);
+    bottom: 72px;
+    width: min(360px, calc(100vw - 24px));
+    max-height: calc(100vh - 116px - env(safe-area-inset-bottom));
   }
 
   .chat-compose {
@@ -1627,7 +1747,7 @@ body[data-theme="dark"] .portfolio-slide {
 
 @media (max-width: 420px) {
   .hero h1 {
-    font-size: 2.42rem;
+    font-size: 2.24rem;
   }
 
   .container {
@@ -1635,8 +1755,22 @@ body[data-theme="dark"] .portfolio-slide {
   }
 
   .hero-content {
-    padding-top: 110px;
-    padding-bottom: 206px;
+    padding-top: 102px;
+    padding-bottom: 164px;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .section-head h2,
+  .modal-copy h2 {
+    font-size: 1.92rem;
+  }
+
+  .capability-grid,
+  .cases-grid {
+    margin-top: 24px;
   }
 
   .product-card,
@@ -1648,6 +1782,13 @@ body[data-theme="dark"] .portfolio-slide {
   .demo-tabs,
   .project-calculator,
   .console-demo {
+    padding: 14px;
+  }
+
+  .capability-card,
+  .case-card,
+  .modal-card,
+  .chat-panel {
     padding: 16px;
   }
 

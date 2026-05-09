@@ -642,7 +642,7 @@
     <div class="modal-backdrop" id="product-modal" aria-hidden="true">
       <div class="modal-card product-modal-card" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
         <button class="modal-close" type="button" id="close-product-modal" aria-label="Закрыть окно">
-          <span aria-hidden="true">×</span>
+          <span class="close-icon" aria-hidden="true"></span>
         </button>
         <div class="product-modal-gallery">
           <div class="product-modal-art-wrap">
@@ -676,7 +676,7 @@
     <div class="modal-backdrop" id="order-modal" aria-hidden="true">
       <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button class="modal-close" type="button" id="close-order-modal" aria-label="Закрыть окно">
-          <span aria-hidden="true">×</span>
+          <span class="close-icon" aria-hidden="true"></span>
         </button>
 
         <div class="modal-copy">
@@ -738,7 +738,7 @@
 
     <div class="chat-widget" id="chat-widget">
       <button class="chat-launcher" type="button" id="chat-launcher" aria-label="Открыть чат">
-        <span>Чат</span>
+        <span class="chat-launcher__icon" aria-hidden="true"></span>
       </button>
 
       <div class="chat-panel" id="chat-panel" aria-hidden="true">
@@ -747,7 +747,9 @@
             <strong>Быстрый вопрос</strong>
             <span>Ответы для первичного контакта</span>
           </div>
-          <button class="chat-close" type="button" id="chat-close" aria-label="Закрыть чат">×</button>
+          <button class="chat-close" type="button" id="chat-close" aria-label="Закрыть чат">
+            <span class="close-icon" aria-hidden="true"></span>
+          </button>
         </div>
 
         <div class="chat-messages" id="chat-messages">
