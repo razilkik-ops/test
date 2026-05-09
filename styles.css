@@ -204,6 +204,9 @@ body.modal-open .page-frame {
 }
 
 .icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   padding: 0;
@@ -226,6 +229,8 @@ body.modal-open .page-frame {
 }
 
 .play-icon {
+  display: block;
+  margin: 0;
   width: 16px;
   height: 16px;
   background: var(--text);
