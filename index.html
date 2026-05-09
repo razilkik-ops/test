@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Лендинг pavelaliev.web для демонстрации клиентам сайтов, интерфейсов и digital-решений."
+    />
+    <title>pavelaliev.web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="light">
+    <div class="page-frame">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="На главный экран">
+          <img class="brand-logo" src="./assets/logo-mark.svg" alt="Логотип pavelaliev.web" />
+          <span class="brand-copy">
+            <strong>pavelaliev.web</strong>
+            <small>web design and development</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="#solutions">Решения</a>
+          <a href="#shop">Каталог</a>
+          <a href="#projects">Проекты</a>
+          <a href="#contact">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="button button-header" type="button" id="open-order-modal">Заказать</button>
+          <button class="icon-button theme-toggle" type="button" aria-label="Сменить тему" title="Сменить тему">
+            <span class="theme-toggle__icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <img class="hero-media" src="./assets/hero-lab.png" alt="" />
+          <div class="hero-shade" aria-hidden="true"></div>
+
+          <div class="container hero-content">
+            <p class="eyebrow" data-reveal="up">Лендинги, сайты услуг, веб-интерфейсы</p>
+            <h1 id="hero-title" data-reveal="up">Сайт, который делает вашу экспертизу заметной с первого экрана</h1>
+            <p class="hero-text" data-reveal="up">
+              Проект собирается так, чтобы у клиента сразу появилось ощущение
+              уровня: продуманная структура, сильный визуал, понятный путь до
+              заявки и современная интерактивность.
+            </p>
+
+            <div class="hero-actions" data-reveal="up">
+              <button class="button button-primary" type="button" data-open-modal>Оставить заявку</button>
+              <a class="button button-secondary" href="#projects">Посмотреть примеры</a>
+            </div>
+          </div>
+
+          <div class="hero-strip" aria-label="Ключевые преимущества">
+            <div>
+              <strong><span data-counter="14">0</span> дней</strong>
+              <span>средний запуск лендинга</span>
+            </div>
+            <div>
+              <strong><span data-counter="98">0</span>/100</strong>
+              <span>потенциал по скорости</span>
+            </div>
+            <div>
+              <strong><span data-counter="6">0</span>+</strong>
+              <span>сценариев взаимодействия</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section intro-band" id="services">
+          <div class="container section-head" data-reveal="up">
+            <p class="eyebrow">Что вы получаете</p>
+            <h2>Не просто красивую страницу, а инструмент, который помогает продавать</h2>
+          </div>
+
+          <div class="container capability-grid">
+            <article class="capability-card" data-reveal="up">
+              <span class="card-number">01</span>
+              <h3>Сильный первый экран</h3>
+              <p>Оффер, визуальный акцент и понятный сценарий действия без перегруза и случайных блоков.</p>
+            </article>
+            <article class="capability-card" data-reveal="up">
+              <span class="card-number">02</span>
+              <h3>Продуманная логика</h3>
+              <p>Структура собирается так, чтобы посетитель быстро понял ценность, увидел кейсы и оставил заявку.</p>
+            </article>
+            <article class="capability-card" data-reveal="up">
+              <span class="card-number">03</span>
+              <h3>Современное взаимодействие</h3>
+              <p>Форма, калькулятор, чат, слайдеры и микродинамика делают сайт живым и убедительным.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section solutions-band" id="solutions">
+          <div class="container tools-grid">
+            <div class="section-head tools-copy" data-reveal="up">
+              <p class="eyebrow">Формат работы</p>
+              <h2>Можно собрать решение под задачу, а не под шаблон</h2>
+              <p>
+                Один и тот же подход подходит для лендинга эксперта, страницы
+                агентства, сайта услуги или небольшого интерфейса с логикой и формами.
+              </p>
+            </div>
+
+            <div class="demo-tabs" data-reveal="up">
+              <div class="segmented-control" role="tablist" aria-label="Тип решения">
+                <button class="segment is-active" type="button" role="tab" aria-selected="true" data-tab="landing">
+                  Лендинг
+                </button>
+                <button class="segment" type="button" role="tab" aria-selected="false" data-tab="service">
+                  Сайт услуги
+                </button>
+                <button class="segment" type="button" role="tab" aria-selected="false" data-tab="interface">
+                  Интерфейс
+                </button>
+              </div>
+
+              <div class="tab-panel is-active" data-panel="landing">
+                <h3>Лендинг под лиды</h3>
+                <p>Подходит, когда нужно быстро упаковать оффер, показать доверие и довести до заявки.</p>
+                <div class="skill-meter"><span style="--value: 92%"></span></div>
+              </div>
+              <div class="tab-panel" data-panel="service">
+                <h3>Сайт под услуги</h3>
+                <p>Когда важно раскрыть направление работы, показать процесс и сделать понятную подачу по блокам.</p>
+                <div class="skill-meter"><span style="--value: 88%"></span></div>
+              </div>
+              <div class="tab-panel" data-panel="interface">
+                <h3>Небольшой интерфейс</h3>
+                <p>Если нужен кабинет, дашборд, анкета, каталог или рабочая страница с динамикой и логикой.</p>
+                <div class="skill-meter"><span style="--value: 84%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container tools-grid tools-grid-bottom">
+            <form class="project-calculator" id="project-calculator" data-reveal="up">
+              <div class="calculator-head">
+                <span>Предварительная оценка</span>
+                <strong id="estimate-total">$1 200</strong>
+              </div>
+
+              <label class="range-field">
+                <span>Количество экранов: <strong id="screen-count">6</strong></span>
+                <input id="screens" name="screens" type="range" min="3" max="14" value="6" />
+              </label>
+
+              <label class="range-field">
+                <span>Приоритет по дизайну: <strong id="design-level-label">Продвинутый</strong></span>
+                <input id="design-level" name="designLevel" type="range" min="1" max="3" value="2" />
+              </label>
+
+              <div class="check-grid" aria-label="Опции проекта">
+                <label>
+                  <input type="checkbox" name="features" value="450" checked />
+                  <span>Анимации</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="features" value="700" />
+                  <span>Интеграции</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="features" value="550" checked />
+                  <span>Форма заявки</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="features" value="420" />
+                  <span>SEO и аналитика</span>
+                </label>
+              </div>
+
+              <div class="estimate-footer">
+                <span id="estimate-time">8-10 рабочих дней</span>
+                <button class="button button-primary" type="button" id="apply-estimate">Использовать в заявке</button>
+              </div>
+            </form>
+
+            <div class="console-demo" data-reveal="up">
+              <div class="console-top">
+                <span>План запуска</span>
+                <button class="icon-button" type="button" id="run-demo" aria-label="Показать шаги" title="Показать шаги">
+                  <span class="play-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="console-log" id="console-log" aria-live="polite">
+                <p><span>step</span> структура и акценты страницы</p>
+                <p><span>step</span> визуальная система и адаптив</p>
+                <p><span>step</span> интеграции, форма и финальная настройка</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section slider-band" id="projects">
+          <div class="container section-head" data-reveal="up">
+            <p class="eyebrow">Примеры решений</p>
+            <h2>Варианты проекта под разные задачи и формат бизнеса</h2>
+          </div>
+
+          <div class="container portfolio-slider" data-reveal="up">
+            <div class="slider-head">
+              <div class="slider-meta">
+                <span id="slide-counter">01 / 03</span>
+                <strong>Подходит для разных ниш</strong>
+              </div>
+              <div class="slider-controls">
+                <button class="slider-button" type="button" id="prev-slide" aria-label="Предыдущий слайд">
+                  <span aria-hidden="true">←</span>
+                </button>
+                <button class="slider-button" type="button" id="next-slide" aria-label="Следующий слайд">
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="slider-stage">
+              <article class="portfolio-slide is-active" data-slide>
+                <span class="slide-tag">Эксперт / консультант</span>
+                <h3>Продающий сайт с акцентом на доверие и быстрый контакт</h3>
+                <p>Подходит, когда нужно упаковать личный бренд, услуги, кейсы и сделать сильный путь к заявке.</p>
+                <ul class="slide-points">
+                  <li>структура под оффер и доверие</li>
+                  <li>форма, чат и CTA в нескольких точках</li>
+                  <li>адаптив под мобильный трафик</li>
+                </ul>
+              </article>
+
+              <article class="portfolio-slide" data-slide>
+                <span class="slide-tag">Студия / агентство</span>
+                <h3>Имиджевый сайт с ясной подачей услуг и кейсов</h3>
+                <p>Нужен, когда важно выглядеть серьёзно, современно и показать глубину подхода без визуального шума.</p>
+                <ul class="slide-points">
+                  <li>блоки услуг и сегментация направлений</li>
+                  <li>слайдер кейсов и фильтры форматов</li>
+                  <li>аккуратный premium-визуал</li>
+                </ul>
+              </article>
+
+              <article class="portfolio-slide" data-slide>
+                <span class="slide-tag">Продукт / сервис</span>
+                <h3>Посадочная страница с интерактивом и небольшими интерфейсными сценариями</h3>
+                <p>Если нужно показать не только картинку, но и логику продукта: калькуляторы, формы, этапы и микроинтеракции.</p>
+                <ul class="slide-points">
+                  <li>динамические блоки и сценарии</li>
+                  <li>интеграции с CRM, почтой, Telegram</li>
+                  <li>готовность к развитию в полноценный продукт</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="slider-dots" id="slider-dots" aria-label="Навигация по слайдам">
+              <button class="slider-dot is-active" type="button" data-slide-dot="0" aria-label="Слайд 1"></button>
+              <button class="slider-dot" type="button" data-slide-dot="1" aria-label="Слайд 2"></button>
+              <button class="slider-dot" type="button" data-slide-dot="2" aria-label="Слайд 3"></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section shop-band" id="shop">
+          <div class="container section-head" data-reveal="up">
+            <p class="eyebrow">Демо e-commerce</p>
+            <h2>Карточки вымышленных товаров с просмотром, корзиной и покупкой</h2>
+          </div>
+
+          <div class="container shop-layout">
+            <div class="shop-main" data-reveal="up">
+              <div class="shop-toolbar">
+                <label class="design-select">
+                  <span>Категория</span>
+                  <select id="product-category">
+                    <option value="all">Все товары</option>
+                    <option value="devices">Устройства</option>
+                    <option value="accessories">Аксессуары</option>
+                    <option value="audio">Аудио</option>
+                  </select>
+                </label>
+
+                <label class="design-select">
+                  <span>Сортировка</span>
+                  <select id="product-sort">
+                    <option value="popular">Сначала популярные</option>
+                    <option value="cheap">Сначала дешевле</option>
+                    <option value="expensive">Сначала дороже</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="product-grid" id="product-grid">
+                <article class="product-card" data-product-id="nova-pad" data-category="devices" data-price="690" data-name="NovaPad Air" data-description="Компактный рабочий планшет для презентаций, заметок и коммуникации с клиентами." data-photos="./assets/products/device-01-a.svg|./assets/products/device-01-b.svg|./assets/products/device-01-c.svg" data-colors="Graphite|Violet|Silver" data-sizes="11&quot;|12.9&quot;|14&quot;">
+                  <span class="product-tag">Устройство</span>
+                  <div class="product-gallery">
+                    <img class="product-photo-main" src="./assets/products/device-01-a.svg" alt="NovaPad Air" />
+                    <div class="product-thumbs"></div>
+                  </div>
+                  <h3>NovaPad Air</h3>
+                  <p>Лёгкий планшет для созвонов, быстрых задач и демонстраций.</p>
+                  <div class="product-variants">
+                    <label class="product-variant">
+                      <span>Цвет</span>
+                      <select class="product-color"></select>
+                    </label>
+                    <label class="product-variant">
+                      <span>Размер</span>
+                      <select class="product-size"></select>
+                    </label>
+                  </div>
+                  <div class="product-bottom">
+                    <strong>$690</strong>
+                    <div class="product-actions">
+                      <button class="button button-secondary product-view" type="button">Просмотр</button>
+                      <button class="button button-primary product-add" type="button">В корзину</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="product-card" data-product-id="flux-key" data-category="accessories" data-price="140" data-name="FluxKeys Pro" data-description="Механическая клавиатура с тихим ходом и настраиваемой подсветкой для длительной работы." data-photos="./assets/products/accessory-01-a.svg|./assets/products/accessory-01-b.svg|./assets/products/accessory-01-c.svg" data-colors="Black|Lilac|White" data-sizes="60%|75%|100%">
+                  <span class="product-tag">Аксессуар</span>
+                  <div class="product-gallery">
+                    <img class="product-photo-main" src="./assets/products/accessory-01-a.svg" alt="FluxKeys Pro" />
+                    <div class="product-thumbs"></div>
+                  </div>
+                  <h3>FluxKeys Pro</h3>
+                  <p>Механическая клавиатура для продуктивной работы каждый день.</p>
+                  <div class="product-variants">
+                    <label class="product-variant">
+                      <span>Цвет</span>
+                      <select class="product-color"></select>
+                    </label>
+                    <label class="product-variant">
+                      <span>Формат</span>
+                      <select class="product-size"></select>
+                    </label>
+                  </div>
+                  <div class="product-bottom">
+                    <strong>$140</strong>
+                    <div class="product-actions">
+                      <button class="button button-secondary product-view" type="button">Просмотр</button>
+                      <button class="button button-primary product-add" type="button">В корзину</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="product-card" data-product-id="aero-pods" data-category="audio" data-price="230" data-name="AeroPods Max" data-description="Беспроводные наушники с активным шумоподавлением и чистым голосом для звонков." data-photos="./assets/products/audio-01-a.svg|./assets/products/audio-01-b.svg|./assets/products/audio-01-c.svg" data-colors="Midnight|Purple|Pearl" data-sizes="One size">
+                  <span class="product-tag">Аудио</span>
+                  <div class="product-gallery">
+                    <img class="product-photo-main" src="./assets/products/audio-01-a.svg" alt="AeroPods Max" />
+                    <div class="product-thumbs"></div>
+                  </div>
+                  <h3>AeroPods Max</h3>
+                  <p>Чистый звук и комфорт для работы, встреч и фокус-сессий.</p>
+                  <div class="product-variants">
+                    <label class="product-variant">
+                      <span>Цвет</span>
+                      <select class="product-color"></select>
+                    </label>
+                    <label class="product-variant">
+                      <span>Размер</span>
+                      <select class="product-size"></select>
+                    </label>
+                  </div>
+                  <div class="product-bottom">
+                    <strong>$230</strong>
+                    <div class="product-actions">
+                      <button class="button button-secondary product-view" type="button">Просмотр</button>
+                      <button class="button button-primary product-add" type="button">В корзину</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="product-card" data-product-id="luma-screen" data-category="devices" data-price="520" data-name="LumaScreen 27" data-description="Монитор 27&quot; с яркой картинкой и точной цветопередачей для дизайна и аналитики." data-photos="./assets/products/device-01-c.svg|./assets/products/device-01-b.svg|./assets/products/device-01-a.svg" data-colors="Black|Silver" data-sizes="24&quot;|27&quot;|32&quot;">
+                  <span class="product-tag">Устройство</span>
+                  <div class="product-gallery">
+                    <img class="product-photo-main" src="./assets/products/device-01-c.svg" alt="LumaScreen 27" />
+                    <div class="product-thumbs"></div>
+                  </div>
+                  <h3>LumaScreen 27</h3>
+                  <p>Монитор с точной цветопередачей и комфортной диагональю.</p>
+                  <div class="product-variants">
+                    <label class="product-variant">
+                      <span>Цвет</span>
+                      <select class="product-color"></select>
+                    </label>
+                    <label class="product-variant">
+                      <span>Диагональ</span>
+                      <select class="product-size"></select>
+                    </label>
+                  </div>
+                  <div class="product-bottom">
+                    <strong>$520</strong>
+                    <div class="product-actions">
+                      <button class="button button-secondary product-view" type="button">Просмотр</button>
+                      <button class="button button-primary product-add" type="button">В корзину</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="product-card" data-product-id="spark-mouse" data-category="accessories" data-price="95" data-name="Spark Mouse S" data-description="Эргономичная мышь с точным сенсором и автономностью до 40 дней." data-photos="./assets/products/accessory-01-c.svg|./assets/products/accessory-01-a.svg|./assets/products/accessory-01-b.svg" data-colors="Graphite|Purple|Sand" data-sizes="S|M|L">
+                  <span class="product-tag">Аксессуар</span>
+                  <div class="product-gallery">
+                    <img class="product-photo-main" src="./assets/products/accessory-01-c.svg" alt="Spark Mouse S" />
+                    <div class="product-thumbs"></div>
+                  </div>
+                  <h3>Spark Mouse S</h3>
+                  <p>Эргономичная мышь с точным управлением и мягким кликом.</p>
+                  <div class="product-variants">
+                    <label class="product-variant">
+                      <span>Цвет</span>
+                      <select class="product-color"></select>
+                    </label>
+                    <label class="product-variant">
+                      <span>Размер</span>
+                      <select class="product-size"></select>
+                    </label>
+                  </div>
+                  <div class="product-bottom">
+                    <strong>$95</strong>
+                    <div class="product-actions">
+                      <button class="button button-secondary product-view" type="button">Просмотр</button>
+                      <button class="button button-primary product-add" type="button">В корзину</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="product-card" data-product-id="echo-station" data-category="audio" data-price="310" data-name="EchoStation Mini" data-description="Компактная акустика для офиса и дома с объёмным звучанием и Bluetooth 5.3." data-photos="./assets/products/audio-01-c.svg|./assets/products/audio-01-a.svg|./assets/products/audio-01-b.svg" data-colors="Deep Black|Violet|Gray" data-sizes="Mini|Standard">
+                  <span class="product-tag">Аудио</span>
+                  <div class="product-gallery">
+                    <img class="product-photo-main" src="./assets/products/audio-01-c.svg" alt="EchoStation Mini" />
+                    <div class="product-thumbs"></div>
+                  </div>
+                  <h3>EchoStation Mini</h3>
+                  <p>Компактная акустика для фоновой музыки и презентаций.</p>
+                  <div class="product-variants">
+                    <label class="product-variant">
+                      <span>Цвет</span>
+                      <select class="product-color"></select>
+                    </label>
+                    <label class="product-variant">
+                      <span>Размер</span>
+                      <select class="product-size"></select>
+                    </label>
+                  </div>
+                  <div class="product-bottom">
+                    <strong>$310</strong>
+                    <div class="product-actions">
+                      <button class="button button-secondary product-view" type="button">Просмотр</button>
+                      <button class="button button-primary product-add" type="button">В корзину</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <aside class="cart-panel" data-reveal="up">
+              <h3>Корзина</h3>
+              <p class="cart-meta">Товаров: <strong id="cart-count">0</strong></p>
+              <div class="cart-items" id="cart-items">
+                <p class="cart-empty">Корзина пока пустая.</p>
+              </div>
+              <div class="cart-total">
+                <span>Итого</span>
+                <strong id="cart-total">$0</strong>
+              </div>
+            </aside>
+          </div>
+
+          <div class="container checkout-wrap" data-reveal="up">
+            <div class="section-head">
+              <p class="eyebrow">Форма покупки</p>
+              <h2>Оформление заказа как финальный сценарий взаимодействия</h2>
+            </div>
+
+            <form class="checkout-form" id="checkout-form" novalidate>
+              <div class="field-grid">
+                <label class="field">
+                  <span>Имя покупателя</span>
+                  <input name="buyerName" type="text" placeholder="Иван" required minlength="2" />
+                  <small class="field-error"></small>
+                </label>
+
+                <label class="field">
+                  <span>Телефон</span>
+                  <input name="buyerPhone" type="text" placeholder="+375..." required minlength="6" />
+                  <small class="field-error"></small>
+                </label>
+              </div>
+
+              <div class="field-grid">
+                <label class="field">
+                  <span>Доставка</span>
+                  <select name="deliveryType" required>
+                    <option value="">Выберите способ</option>
+                    <option value="Курьер">Курьер</option>
+                    <option value="Самовывоз">Самовывоз</option>
+                    <option value="Почта">Почта</option>
+                  </select>
+                  <small class="field-error"></small>
+                </label>
+
+                <label class="field">
+                  <span>Оплата</span>
+                  <select name="paymentType" required>
+                    <option value="">Выберите метод</option>
+                    <option value="Карта онлайн">Карта онлайн</option>
+                    <option value="Наличные">Наличные</option>
+                    <option value="Счёт для компании">Счёт для компании</option>
+                  </select>
+                  <small class="field-error"></small>
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Комментарий к заказу</span>
+                <textarea name="buyerComment" rows="4" placeholder="Например: удобное время доставки и детали по заказу"></textarea>
+                <small class="field-error"></small>
+              </label>
+
+              <div class="checkout-footer">
+                <span>Сумма заказа: <strong id="checkout-total">$0</strong></span>
+                <button class="button button-primary" type="submit" id="checkout-submit">Оформить покупку</button>
+              </div>
+              <p class="form-status" id="checkout-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="section cases-band">
+          <div class="container section-head" data-reveal="up">
+            <p class="eyebrow">Варианты реализации</p>
+            <h2>Можно выбрать формат проекта под задачу и бюджет</h2>
+          </div>
+
+          <div class="container filter-row" role="group" aria-label="Фильтр форматов" data-reveal="up">
+            <button class="filter-button is-active" type="button" data-filter="all">Все</button>
+            <button class="filter-button" type="button" data-filter="landing">Лендинги</button>
+            <button class="filter-button" type="button" data-filter="app">Интерфейсы</button>
+            <button class="filter-button" type="button" data-filter="auto">Интеграции</button>
+          </div>
+
+          <div class="container cases-grid">
+            <article class="case-card" data-case="landing" data-reveal="up">
+              <span>Landing</span>
+              <h3>Лендинг эксперта</h3>
+              <p>Упаковка оффера, кейсов и точек контакта в единую убедительную страницу.</p>
+            </article>
+            <article class="case-card" data-case="landing" data-reveal="up">
+              <span>Website</span>
+              <h3>Сайт услуги</h3>
+              <p>Структура под несколько направлений, доверие, SEO-базу и понятную навигацию.</p>
+            </article>
+            <article class="case-card" data-case="app" data-reveal="up">
+              <span>Interface</span>
+              <h3>Рабочий кабинет</h3>
+              <p>Фильтры, статусы, формы и сценарии внутри аккуратного интерфейса.</p>
+            </article>
+            <article class="case-card" data-case="auto" data-reveal="up">
+              <span>Automation</span>
+              <h3>Автоматизация заявок</h3>
+              <p>Передача лида в CRM, уведомление в чат и сохранение ключевых данных клиента.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section request-band" id="contact">
+          <div class="container request-layout">
+            <div class="section-head request-copy" data-reveal="up">
+              <p class="eyebrow">Контакт и запуск</p>
+              <h2>Если нужен сайт с сильной подачей, можно начать с короткой заявки</h2>
+              <p>
+                Достаточно кратко описать задачу, чтобы сразу обсудить формат,
+                сроки, объём работ и подходящую конфигурацию проекта.
+              </p>
+
+              <div class="request-proof">
+                <div><strong>Быстрый старт</strong><span>понятный бриф без лишней бюрократии</span></div>
+                <div><strong>Гибкая реализация</strong><span>от чистого лендинга до сайта с логикой и интеграциями</span></div>
+              </div>
+            </div>
+
+            <form class="lead-form request-form" id="request-form" novalidate data-reveal="up">
+              <div class="field-grid">
+                <label class="field">
+                  <span>Имя</span>
+                  <input name="name" type="text" autocomplete="name" placeholder="Алексей" required minlength="2" />
+                  <small class="field-error"></small>
+                </label>
+
+                <label class="field">
+                  <span>Телефон или Telegram</span>
+                  <input name="contact" type="text" autocomplete="tel" placeholder="+375 / @username" required minlength="5" />
+                  <small class="field-error"></small>
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Тип проекта</span>
+                <select name="projectType" required>
+                  <option value="">Выберите направление</option>
+                  <option value="Лендинг">Лендинг</option>
+                  <option value="Сайт услуги">Сайт услуги</option>
+                  <option value="Веб-интерфейс">Веб-интерфейс</option>
+                  <option value="Интеграция">Интеграция</option>
+                </select>
+                <small class="field-error"></small>
+              </label>
+
+              <label class="field">
+                <span>Кратко о задаче</span>
+                <textarea name="message" rows="5" placeholder="Что нужно сделать, какие сроки и что важно учесть" required minlength="12"></textarea>
+                <small class="field-error"></small>
+              </label>
+
+              <label class="field">
+                <span>Ориентир по бюджету</span>
+                <input class="budget-field" name="budget" type="text" value="$1 200" readonly />
+              </label>
+
+              <button class="button button-primary form-submit" type="submit">
+                <span>Отправить заявку</span>
+                <span class="submit-loader" aria-hidden="true"></span>
+              </button>
+
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="product-modal" aria-hidden="true">
+      <div class="modal-card product-modal-card" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+        <button class="modal-close" type="button" id="close-product-modal" aria-label="Закрыть окно">
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="product-modal-gallery">
+          <div class="product-modal-art-wrap">
+            <img class="product-modal-art-image" id="product-modal-art-image" src="./assets/products/device-01-a.svg" alt="Товар" />
+          </div>
+          <div class="product-modal-thumbs" id="product-modal-thumbs"></div>
+          <button class="button button-secondary product-zoom-toggle" type="button" id="product-zoom-toggle">Зум</button>
+        </div>
+        <div class="product-modal-copy">
+          <p class="eyebrow">Карточка товара</p>
+          <h2 id="product-modal-title">Название товара</h2>
+          <p id="product-modal-description"></p>
+          <div class="product-modal-variants">
+            <label class="product-variant">
+              <span>Цвет</span>
+              <select id="product-modal-color"></select>
+            </label>
+            <label class="product-variant">
+              <span>Размер</span>
+              <select id="product-modal-size"></select>
+            </label>
+          </div>
+          <div class="product-modal-bottom">
+            <strong id="product-modal-price">$0</strong>
+            <button class="button button-primary" type="button" id="product-modal-add">Добавить в корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="order-modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" id="close-order-modal" aria-label="Закрыть окно">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <div class="modal-copy">
+          <p class="eyebrow">Заказать проект</p>
+          <h2 id="modal-title">Оставьте заявку, и можно обсудить формат будущего сайта</h2>
+          <p>
+            Достаточно пары вводных, чтобы быстро понять задачу, предложить
+            подходящую структуру и сориентировать по срокам и стоимости.
+          </p>
+        </div>
+
+        <form class="lead-form modal-form" id="modal-request-form" novalidate>
+          <div class="field-grid">
+            <label class="field">
+              <span>Имя</span>
+              <input name="name" type="text" autocomplete="name" placeholder="Алексей" required minlength="2" />
+              <small class="field-error"></small>
+            </label>
+
+            <label class="field">
+              <span>Контакт</span>
+              <input name="contact" type="text" autocomplete="tel" placeholder="+375 / @username" required minlength="5" />
+              <small class="field-error"></small>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Тип проекта</span>
+            <select name="projectType" required>
+              <option value="">Выберите направление</option>
+              <option value="Лендинг">Лендинг</option>
+              <option value="Сайт услуги">Сайт услуги</option>
+              <option value="Веб-интерфейс">Веб-интерфейс</option>
+              <option value="Интеграция">Интеграция</option>
+            </select>
+            <small class="field-error"></small>
+          </label>
+
+          <label class="field">
+            <span>Что нужно сделать</span>
+            <textarea name="message" rows="4" placeholder="Опишите задачу в двух-трёх предложениях" required minlength="12"></textarea>
+            <small class="field-error"></small>
+          </label>
+
+          <label class="field">
+            <span>Ориентир по бюджету</span>
+            <input class="budget-field" name="budget" type="text" value="$1 200" readonly />
+          </label>
+
+          <button class="button button-primary form-submit" type="submit">
+            <span>Отправить заявку</span>
+            <span class="submit-loader" aria-hidden="true"></span>
+          </button>
+
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="chat-widget" id="chat-widget">
+      <button class="chat-launcher" type="button" id="chat-launcher" aria-label="Открыть чат">
+        <span>Чат</span>
+      </button>
+
+      <div class="chat-panel" id="chat-panel" aria-hidden="true">
+        <div class="chat-head">
+          <div>
+            <strong>Быстрый вопрос</strong>
+            <span>Ответы для первичного контакта</span>
+          </div>
+          <button class="chat-close" type="button" id="chat-close" aria-label="Закрыть чат">×</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-message chat-message-bot">
+            Здравствуйте. Можно быстро подсказать по срокам, стоимости или формату проекта.
+          </div>
+        </div>
+
+        <div class="chat-actions">
+          <button class="chat-chip" type="button" data-chat-value="Сколько занимает запуск?">Сроки</button>
+          <button class="chat-chip" type="button" data-chat-value="Какой бюджет нужен для старта?">Бюджет</button>
+          <button class="chat-chip" type="button" data-chat-value="Что входит в работу?">Что входит</button>
+        </div>
+
+        <form class="chat-compose" id="chat-compose">
+          <input id="chat-input" type="text" placeholder="Напишите вопрос..." aria-label="Сообщение" />
+          <button type="submit" class="chat-send">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
