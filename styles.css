@@ -1456,11 +1456,42 @@ body[data-theme="dark"] .portfolio-slide {
   .site-header {
     top: 10px;
     width: calc(100% - 20px);
-    padding-right: 10px;
+    min-height: 62px;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .brand-copy strong {
+    font-size: 0.88rem;
   }
 
   .brand-copy small {
     display: none;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .button-header {
+    min-height: 40px;
+    padding: 0 12px;
+    font-size: 0.84rem;
+  }
+
+  .icon-button {
+    width: 40px;
+    height: 40px;
   }
 
   .hero {
@@ -1473,6 +1504,11 @@ body[data-theme="dark"] .portfolio-slide {
 
   .hero h1 {
     font-size: 3rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    line-height: 1.64;
   }
 
   .hero-actions,
@@ -1505,6 +1541,25 @@ body[data-theme="dark"] .portfolio-slide {
     font-size: 2.2rem;
   }
 
+  .modal-backdrop {
+    padding: 12px;
+  }
+
+  .modal-card {
+    max-height: calc(100vh - 24px);
+    overflow: auto;
+    padding: 18px;
+  }
+
+  .product-modal-bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-modal-bottom strong {
+    font-size: 1.6rem;
+  }
+
   .field-grid,
   .check-grid,
   .request-proof {
@@ -1532,9 +1587,72 @@ body[data-theme="dark"] .portfolio-slide {
     flex: 1;
   }
 
+  .cart-item {
+    grid-template-columns: 1fr auto;
+  }
+
+  .cart-item button {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
   .chat-widget {
-    right: 12px;
-    bottom: 12px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    width: auto;
+    max-width: none;
+  }
+
+  .chat-launcher {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .chat-panel {
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - 160px);
+  }
+
+  .chat-compose {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-send {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 2.42rem;
+  }
+
+  .container {
+    width: calc(100% - 20px);
+  }
+
+  .hero-content {
+    padding-top: 110px;
+    padding-bottom: 206px;
+  }
+
+  .product-card,
+  .shop-main,
+  .cart-panel,
+  .checkout-form,
+  .request-form,
+  .portfolio-slider,
+  .demo-tabs,
+  .project-calculator,
+  .console-demo {
+    padding: 16px;
+  }
+
+  .product-photo-main {
+    height: 112px;
   }
 }
 
